@@ -1,8 +1,21 @@
-node {
-    stage('Hello') {
-        echo "Hello World?"
-    }
-    stage('World'){
-        echo "nvm"
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
     }
 }
